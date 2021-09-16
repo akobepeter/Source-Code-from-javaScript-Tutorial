@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Enter a  number:<input type="number" min="1" max="30" id="test" autofocus></p>
+ <input type="button" value="submit" onclick="myfunction()" > 
+    <p id="display"></p>
+    <script>
+
+// function randomIntFromInterval(min,max){
+//     return Math.floor(Math.random()*(max-min+1)+min);
+// }
+
+
+
+        // function getRandomArbitrary( min,max){
+        //     return Math.random()*(max-min)+ min;
+        //     }
+        //     getRandomArbitrary();
+        //     document.write(Math.random());
+         function myfunction(){
+            //  var x = document.getElementById("test").innerHTML = Math.random(); 
+            var x = document.getElementById("test").value;    
+            var randomNum = Math.floor(Math.random()*30) +1;
+            if(x == randomNum){
+                document.getElementById("display").innerHTML = "correct, you entered " + x + " the random number is: " + randomNum;                
+                // document.write("correct");
+             }
+         //else if( x == NaN){
+            //     document.getElementById("display").innerHTML = "Please enter a valid number";
+            // }
+            else{
+                document.getElementById("display").innerHTML = "wrong, you entered   " + x +" but the right number is: " + randomNum;
+                // document.write("wrong, you entered " + x +" but the right number is: " + randomNum);
+            }
+          
+         }
+</script>
+</body>
+</html>

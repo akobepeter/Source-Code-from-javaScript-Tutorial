@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+     
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                First Number
+            </td>
+            <td>
+                <input type="text" id="FirstNumber">
+            </td>
+        </tr>
+        <tr>
+                <td>
+                    Second Number
+                </td>
+                <td>
+                    <input type="text" id="SecondNumber">
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                        Result
+                    </td>
+                    <td>
+                        <input type="text" id="Result">
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <input type="button" value="Add"  id="btnAdd" onclick="addnumbers()">
+                        </td>
+                    </tr>
+    </table>
+    <input type="button" value="i love myself" onclick="iloveGod()">
+    <input type="button" value="i love myself" onclick="ilovejesus('Peter',10,'Rock Haven')">
+    <input type="button" value="calling function" onclick="secondfunction()">
+    <input type="button" value="learthisstuff" onclick="thirdfunction()">
+    <input type="button" value="learn" onclick="fourthFunction()">
+    <script>
+
+            function addnumbers(){
+            var FirstNumber =parseInt(document.getElementById("FirstNumber").value);
+            if(isNaN(FirstNumber)){
+                alert("First Number Required");
+            }else{
+
+            }
+            
+            var SecondNumber =parseInt(document.getElementById("SecondNumber").value); 
+            if(isNaN(SecondNumber)){
+                alert("Second Number Required");
+            }
+     
+        document.getElementById("Result").value = FirstNumber + SecondNumber;
+        }
+        function ilovejesus(name,age,address){
+            document.write("My name is " + name +" and am " + age + "years old "+ " and i leave at " + address);
+        }
+        function iloveGod(){
+            document.write("let praise Jesus");
+        } 
+        function concatenate(first,last){
+            let full;
+            full = first +" " + last;
+            return full;
+        }
+        function secondfunction(){
+            let result;
+            result = concatenate('kemi','olowo');
+            document.write(result);
+        }
+        function multiply(one,two){
+            let full;
+            full = one * two;
+            return full;
+        }
+        function thirdfunction(){
+            let result;
+            result = multiply(4,3);
+            document.write(result);
+        } 
+        // let thenumber = Number(prompt("Enter a Number"));
+        // switch(thenumber){
+        //     case 1:
+        //     alert("Eligibility Status");
+        //     case 2:
+        //     alert("Request Data(Xtra Byte");
+        //     case 3:
+        //     alert("Xtra Cash");
+        //     case 4:
+        //     alert("Xtra Time Balance");
+        //     case 5:
+        //     alert("Xtra Time History");
+        //     case 9:
+        //     alert("Next");
+        //     default:
+        //     alert("Exit");
+        // } 
+
+
+        var me = new Function("x","y","return x*y;");
+        function fourthFunction(){
+            var result;
+            result= me(10,10);
+            document.write(result);
+        }
+        var name = "Kemi";
+        name.age = 30;
+        console.log(name.age);
+        var me = new Object();
+            me.name = "peter";
+             me.age = 12;
+         console.log(me.name);
+    </script>
+</body>
+</html>

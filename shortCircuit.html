@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    //    var todos = ["wash the dishes"];
+
+       var todos = [];
+       window.setTimeout(function() {
+           var input = prompt("Type new to log in todo List,type previous to logo in previous todo list");
+
+        //    while (input == "quit") {
+        //           console.log("ok,you have quit this app");
+        //        if (input == "list") {
+        //             console.log(todos);   
+        //        }else if(input == "new"){
+        //         var newTodos = prompt("enter new todos");
+        //         todos.push(newTodos);
+        //         console.log(todos);
+        //        }
+        //       // input = prompt("what would you want to do");
+        //    }
+
+           while (input !== "quit") {
+            var newTodos = prompt("enter new todos");
+                todos.push(newTodos);
+                console.log(todos);
+                
+                if(input == "quit"){
+                console.log("ok,you have quit this app");
+               }
+                
+
+
+                //   console.log("ok,you have quit this app");
+           }
+               if (input == "list") {
+                    console.log(todos);
+                     
+                    if(input == "quit"){
+                console.log("ok,you have quit this app");
+               }  
+               } 
+              // input = prompt("what would you want to do");
+        //    }
+             
+       },9000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //creating ab array
+        // var shoppingList = ["carrots","eggs","water","salts"];
+        //Acessing an array value
+        // console.log(shoppingList[0]);
+        // console.log(shoppingList[4]);
+
+        // var students = ['Peter','Paul','Lucy','Sammy'];
+        // for(var i = 0; i<students.length;i++){
+        //     console.log(students[i]);
+        // }
+
+        // var playList = ['A born star','Run This Town','work hard'];
+
+
+        // function print(message){
+        //     console.log(message);
+        // }
+
+        // function printList(list){
+        //   var listHTML = '<ol>';
+        //   for(var i = 0;i<list.length;i++){
+        //     listHTML+= '<li>' + list[i] + '</li>';
+        //   }
+        //   listHTML += '</ol>';
+        //   printList(listHTML);
+        // }
+        // printList(playList);
+
+
+            // var inStock = ['apples','eggs','milk','cookies','cheese','bread','carrot','pizza','potato','crackers','tofu','frozen dinner'];
+
+            // var search;
+
+            // function print(message){
+            //     console.log(message);
+            // }
+
+            // while(true){
+               
+            //     search = prompt('Search for a product in our store.Type "list" to show allof the produce and "quit" to exist');
+            //     search = search.toLowerCase();
+            //     if(search == 'quit'){
+            //         break;
+            //     }else if(search == 'list'){
+            //         print(inStock.join(','));
+            //     }else{
+            //         if(inStock.indexOf(search) > -1){
+            //             print(`Yes we have ${search} in our store`);
+            //         }else{
+            //             print(`${search} not in stock`)
+            //         }
+            //     }
+                
+            // }
+
+
+
+                // var playList = [
+                //     ['God will make a way','Don Meon'],
+                //     ['Gratitude','Tope Alabi'],
+                //     ['Excess love','Mercy Chinwo'],
+                //     ['Morire','Mike Abdul'],
+                //     ['Jesus','Ada'],
+
+                // ];
+
+                // function print(message){
+                //     document.write(message);
+                // }
+
+                // function printSongs(songs){
+                //     var listHTML = '<ol>';
+                //     for(var i =0; i<songs.length;i++){
+                //         listHTML += '<li>' + songs[i][0] + ' by ' +songs[i][1] + '</li>';
+                //     }
+                //     listHTML += '</ol>';
+                //     print(listHTML);
+                // }
+
+                // printSongs(playList);
+
+
+               
+                var questions = [
+                    ['What is my name','Peter'],
+                    ['Who is the president of nigeria','Buhari'],
+                    ['What is my favourite team','Chelsea']
+                ];
+
+                var score = 0;
+                var question;
+                var answer;
+                var response;
+                var html;
+                var correct = [];
+                var wrong = [];
+
+                function print(message){
+                   console.log(message);
+                }
+
+                 function buildList(arr){
+                     var listHTML = '<ol>';
+                     for(var i =0; i<arr.length;i++){
+                        listHTML += '<li>' + arr[i] + '</li>';
+                     }
+                     listHTML += '</ol>';
+                     return listHTML;
+                 }
+
+                for(var i = 0; i<questions.length;i++){
+
+                    question = questions[i][0];
+
+                     question = question.toLowerCase();
+
+                    answer = question[i][1];
+
+                    // answer = answer.toLowerCase();
+
+                    response = prompt(question);
+                    
+                    // response = parseInt(response);
+
+                    // response = response;
+
+                    // response = response.toLowerCase();
+                   
+                    if(response == answer){
+                        score++;
+                        correct.push(question);
+                    }else{
+                        wrong.push(question);
+                    }
+                }
+
+                html = 'You got ' + score + ' questions right';
+                html += '<h2> You got these questions right</h2>';
+                html += buildList(correct);
+                html += '<h2> You got these questions wrong </h2>';
+                html += buildList(wrong);
+                print(html);
+
+              
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

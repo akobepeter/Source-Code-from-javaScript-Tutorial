@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body>
+    <script>
+    quiz = {
+        "name":"Super Hero Quiz",
+        "description": "How many super heroes can you name?",
+        "question": "What is the real name of ",
+        "questions":[
+            {"question":"superman","answer": "clark kent"},
+            {"question":"batman","answer": "bruce wayne"},
+            {"question":"wonder woman","answer": "dianna Prince"},        
+        ]
+    }
+    var score = 0;
+    
+    for(var i = 0, question,answer,max= quiz.questions.length;i<max;i++){
+        question = quiz.questions[i].question;
+        answer = ask(question);
+        check(answer);
+    }
+    function ask(question){
+        return prompt(quiz.question + question);
+
+    }
+    function check(answer){
+    if(answer === quiz.questions[i].answer){
+    alert("correct");
+    score++;
+    }else{
+    alert("Wrong,the right answer is " + quiz.questions[i].answer);
+    }
+
+    function Nextquestion() {
+        alert(" incorrect,next question");
+        if(score == question){
+            
+        }
+         else if(question == score){
+            alert("Game Over, you scored " + score + " points");  
+        }
+    }
+    Nextquestion();
+
+
+     //function gameOver(){
+     //alert("Game Over, you scored " + score + " points");
+      //}
+     //gameOver();
+     }
+ </script>
+</body>
+</html>

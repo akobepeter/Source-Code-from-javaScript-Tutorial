@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <style>
+      section p{
+          font: bold 24px/150% Arial,Helvetica,sans-serif;
+          background: #ccc;
+          border: #999 2px solid;
+          color:#666;
+          text-align: center;
+          padding: 10px;
+          margin: 10px;
+          width:300px;
+      } 
+      .right{
+          background: #0c0;
+          border: #090 2px solid;
+          color:#060;
+      }
+      .wrong{
+          background: #c00;
+          border: #900 2px solid;
+          color:#600;
+      }
+
+   </style>
+</head>
+<body>
+    <header>
+        <p>Score: <strong id="score">0</strong></p>
+
+    </header>
+    <section id="question"></section>
+    <section id="feedback" class="right" class="wrong"></section>
+    <script>
+        var $question = document.getElementById("question");
+        var $score = document.getElementById("score");
+        var $feedback = document.getElementById("feedback");
+
+        
+        function update(element,content,klass){
+            var p = element.firstChild || document.createElement("p");
+            p.textContent = content;
+            element.appendChild(p);
+            if(klass){
+                p.className = klass;
+            }
+        }
+       
+            var score = 0;
+            update($score,score)
+          //  play(quiz);
+            function play(quiz) {
+
+        for(var i = 0, question,answer,max= quiz.questions.length;i<max;i++){
+        question = quiz.questions[i].question;
+        answer = ask(question);
+        check(answer);
+        }
+        function ask(question){
+            update($question,quiz.question + question);
+            return prompt("Enter your answer");
+        }
+        function check(answer){
+            if(answer ===quiz.questions[i].answer){
+                update($feedback,"Correct","right");
+                score++;
+                update($score,score)
+            }else{
+                update($feedback,"Wrong","Wrong");
+            }
+        }
+        function GameOver(params) {
+            update($question,"Game over ,you scored " + score + "points" );
+        }
+        GameOver(); 
+    }
+    //GameOver();
+    
+    
+    </script> 
+</body>
+</html>

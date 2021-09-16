@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Enter your Score:<br><input type="number"  min="0" max="100" id="test1"><br><br>
+    <input type="button" value="submit"  onclick="submit()">
+   <script>
+
+       
+       function submit(){
+        var grade = 0;     
+ if( grade >= 70 && grade < 101){
+     console.log("VG");
+//document.getElementById("test1").innerHTML = "Execellent";
+//document.getElementById("test1").style.color = "red";
+ }else if(grade>= 60 && grade < 70){
+document.getElementById("test1").innerHTML = "Very Good";
+//document.getElementById("test1").style.color = "blue";
+ }else if(grade >=50 && grade < 60){
+    document.getElementById("test1").innerHTML = "Average";
+//document.getElementById("test1").style.color = "red";
+ }else if(grade>=40 && grade < 50 ){
+    document.getElementById("test1").innerHTML = "Below Average";
+//document.getElementById("test1").style.color = "green";
+ }else if( grade>=30 && grade< 40){
+    document.getElementById("test1").innerHTML = "Pass";
+//document.getElementById("test1").style.color = "black";
+ }else if(isNaN(grade)){
+    document.getElementById("test1").innerHTML = "Invalid input";
+//document.getElementById("test1").style.color = "gray";
+ }else if(grade >100){
+    document.getElementById("test1").innerHTML = "Score doesn't exist";
+//document.getElementById("test1").style.color = "crimson";
+ }else if(grade < 30){
+    document.getElementById("test1").innerHTML = "Keep working";
+   // document.getElementById("test1").style.color = "aqua";
+ }
+ else{
+    document.getElementById("test1").innerHTML = "Couldn't find your script" ;
+    //document.getElementById("test1").style.color = "red";
+
+ }
+       }
+ </script> 
+</body>
+</html>

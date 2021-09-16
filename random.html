@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: #f4f4f4;
+            /* width: 40px; */
+            height: 105px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+         <h1>A Programming Quiz</h1>
+         <p id="test"></p>
+     </div>
+    <script>
+
+        // var userInput = prompt('Enter your number');
+
+        // var topNumber = parseInt(userInput);
+
+        // var randNumber = Math.floor(Math.random()* topNumber) + 1;
+
+        // var message = `<p>${randNumber} is a random number between 1 and ${userInput}</p>`;
+
+        // document.querySelector('.container').innerHTML = message;
+        
+        // var userInput1 = prompt("Enter your starting number");
+
+        // var topNumber = parseInt(userInput1);
+
+        // var userInput2 = prompt("Enter your last number");
+
+        // var bottomNumber = parseInt(userInput2);
+
+        // var randNumber = Math.floor(Math.random()*(topNumber - bottomNumber +1)) + bottomNumber;
+
+        // if( userInput1 && userInput2 == NaN){
+
+        //  document.querySelector('.container').innerText = 'Invalid Input';
+
+        //  }
+        // var message = `<h2>${randNumber} is a random number between ${topNumber} and ${bottomNumber}</h2>`;
+        // document.querySelector('.container').innerHTML = message;
+
+            // var answer = prompt("What programming language is the name of a gem");
+            // if(answer.toUpperCase() == 'RUBY'){
+            //     document.getElementById('test').textContent= "That's right";
+            // }else{
+            //     document.querySelector('#test').innerText= "That's wrong";
+            // }
+
+           var correctGuess = false;
+          var randNumber = Math.floor(Math.random()*6)+ 1; 
+          var guessNumber = prompt("Enter a number between 1 and 6");
+          if(parseInt(guessNumber) == randNumber){
+                correctGuess = true;
+          }else if(parseInt(guessNumber) < randNumber){
+            var guessMore = prompt(`Try again.The number I am thinking of is more than ${guessNumber}`);
+              if (parseInt(guessMore) == randNumber) {
+                  correctGuess = true;
+              }
+          }else if(parseInt(guessNumber > randNumber)){
+            var guessLess = prompt(`Try again.The number I am thinking of is less than ${guessNumber}`);
+              if (parseInt(guessLess) == randNumber) {
+                  correctGuess = true;
+              }  
+          }    
+           if (correctGuess) {
+               console.log('You guessed the number');
+           }else{
+               console.log(`Try again.The number is ${randNumber}`);
+           }
+    </script>
+</body>
+</html>

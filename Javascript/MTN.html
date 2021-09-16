@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+</head>
+<body>
+    
+    <ol id="value">
+        <li value = "1"> Eligibility Status</li>
+        <li value = "2"> XtraTime Balance</li>
+        <li value = "3"> XtraTime History</li>
+        <li value = "4"> XtraCash</li>
+        <li value = "5"> Next</li>
+    </ol>
+    <p id="test"></p>
+    <input type="number" id="number" min="1" max="5"><br><br>
+    <input type="button" value="cancel" onclick="cancel()">
+    <input type="button" value="submit" onclick="send()">
+    <script>
+
+
+        function send(){
+            var value = document.getElementById("number").value;
+            if(value == "1"){
+                document.write("Yello.Kindly recharge to pay off your outstanding advance of NGN -400.00 in order to use this service");
+            } else if( value == "2"){
+                document.write("Yello " + " <br> "+ " Your MTN XtraTime Balance is NGN 98.00 " + " <br> " +  " Your MTN XtraByte Balance is 0.00MB " + " <br> " + " Your MTN main account Balance is NGN -400.00 ");
+            } else if(value == 3){
+                document.write("Yello " + " <br> "+ " Your MTN XtraTime Balance is NGN 98.00 " + " <br> " +  " Your MTN XtraByte Balance is 0.00MB " + " <br> " + " Your MTN main account Balance is NGN -400.00 ");
+ 
+            }
+            
+        }
+
+        function cancel(){
+         document.getElementById("test").innerHTML = "exit";
+        }
+
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #sss{
+            background-color: blue;
+            text-align: center;
+            border-radius: 2em;
+        }
+        *{
+            background-color: aqua;
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    Result:<input type="text" id="write">
+    <!-- <h1 id="sss">JavaScript</h1>
+    <p>Printing numbers from 1-10</p> -->
+
+   <script>
+      var x = document.querySelector("write").value;
+      document.write(x); 
+    //    var cars =["Benz","Ferrari","Volvo"];
+    //    for( var i= 0,max=cars.length;i<max;i++){
+    //        console.log(cars[i]);
+    //    }
+    // for( var i = 1; i <= 10;i++){
+    //     document.write(i);
+    //     document.write("<br>");
+    //     document.getElementById("sss").innerHTML=
+    // }
+
+    var favouriteFood = ["rice","indomie","garri","yam",];
+    for( var i= 0,max=favouriteFood.length;i<max;i++){
+            document.write(favouriteFood[i] + "<br>");
+        }
+        for( var num= -10; num<20;num++){
+            // document.getElementById("ww").innerHTML=num;
+            document.write(num);
+            document.write("<br>");
+        }  
+document.write("for loop printing all even number between 10 and 40 ");
+for( var num = 10;num<=40; num+=2){
+    document.write("<br>");
+    document.write(num);
+    document.write("<br>");
+}
+// for( var num = 300;num<=333; num){
+//     document.write("<br>");
+//     document.write(num);
+//     document.write("<br>");
+// }
+
+    </script> 
+</body>
+</html>

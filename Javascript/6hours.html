@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <style>
+       h1{
+           background: #333;
+           height: 10vh;
+           width: 100%;
+           text-align: center;
+           font-size:45px;
+          }
+   </style>
+</head>
+<!-- <body onload="alert('Welcome'); "> -->
+     <body>
+            <p id="demo"></p>
+            <h1 id="title"> JavaScript</h1>
+            <!-- <p id="display"></p> -->
+     <!--   <table>
+            <tr>
+                <td> Full Name</td>
+                <td><input type="text" id="fullname"></td>
+            </tr>
+            <tr>
+                    <td> Get First Name</td>
+                    <td><input type="text" id="getfname"></td>
+                </tr>
+
+                <tr>
+                        <td>Get Second Name</td>
+                        <td><input type="text" id="getsname"></td>
+                    </tr>
+                    <tr>
+                            <td></td>
+                            <td><input type="button"  value="submit query" onclick="sub()"></td>
+                        </tr>
+                    
+        </table> -->
+   
+            
+        <!-- <input type="text" id="myTextBox">
+        <input type="submit" value="click me" onclick="me()"> -->
+    <script>
+
+        // function sub(){
+        //     var fullName = document.getElementById("fullname").value;
+        //     var GetFirstName = fullName.substring(0,fullName.lastIndexOf("."));
+        //     var GetSecondName =fullName.substring(fullName.indexOf(".")+1); 
+
+        //     document.getElementById("getfname").value = GetFirstName;
+        //     document.getElementById("getsname").value = GetSecondNam e; 
+
+        // }
+
+
+
+
+say(1,1);
+
+function say(x,y){
+    console.log(x + y);
+}
+
+var person = {
+    name:"peter",
+    age:12,
+    fullname:function (){
+        return this.name + " is " + this.age + " years old";  
+    }
+    
+}
+console.log(person.fullname());
+
+var planet = {
+    id:5,
+    name:"imtesmpesta box",
+    faction:{
+        factionId:2,
+        name:"nex",
+        notification:function(){
+            console.log("nex alliance... unite!");
+        }
+    },
+    cities:[
+        {locationid:15,name:"Gladius"},
+        {locationid:10,name:"chalybs"},
+        {locationid:5,name:"Ensis"},
+    ]
+};
+//planet.faction.notification();
+console.log(planet.cities[0].name)
+planet.cities[0].name = "jos";
+console.log(planet.cities[0].name);
+
+ var z = planet;
+ console.log(z.name);
+ 
+console.log(typeof planet);
+
+
+
+for(items in planet){
+    console.log("<br>" + items + " ==> " + planet[items]);
+}
+
+
+function Person(name,age,color){
+var person = new Person("peter",12,"back");
+    this.name = name;
+    this.age = age;
+    this.color = color;
+}
+console.log("my name is " +person.name + " and my age is " + person.age);
+
+
+
+var me = function(x,y){
+    return x+y;
+}(2,3);
+console.log(me);
+  //JAVASCRIPT VARIABLES,DATA TYPES,OPERATORS & EXPRESSIONS
+
+
+            // var someValue =  "jaworski";
+            // alert(someValue);
+
+            // var myValue = Number("bob");
+            // document.write (typeof myValue);
+
+            // document.write ("<br>");
+            // var someValue = "My 'so called' life";
+            // document.write(someValue);
+
+
+            //JAVASCRIPT CONDITIONAL LOGIC 
+
+           // var rightNow = new Date();
+           // document.getElementById("display").innerHTML= rightNow;
+
+
+                // JAVASCRIPT FUNCTION
+
+            //   function myNewFunction(){
+            //       alert("Hoowdy");
+            //   }
+            //   myNewFunction();
+ 
+            //   function add( firstNumber,secondNumber){
+            //       return firstNumber +secondNumber;
+            //   } 
+            //   document.write(add(10,10));
+
+
+
+                        // function add(){
+                        //     var tempValue = 0;
+                        //     for(i = 0;i<arguments.length;i++){
+                        //         tempValue +=arguments[i];
+                        //     }
+                        //     return tempValue;
+                        // }
+                        // var myValue = add(1,2,3,4,5);
+                        // alert(myValue);
+
+
+
+                            //    var myResult = (function(){
+                            //         return arguments[0] +arguments[1];
+                            //     })(1,2);
+                            //     alert(myResult);
+
+                                // alert((function(){
+                                //     return arguments[0] +arguments[1];
+                                // })(1,2));
+                                // alert(myResult);
+
+
+                                    //JAVASCRIPT ARRAYAS
+                            //var caveList = [];
+                            //caveList["ford"] = 4;
+           // document.write("my favourite number is " +caveList["ford"]);
+                            
+                                    //LOOPING STATEMENT IN JAVASCRIPT
+                                
+                                 //for(var i = 1; i<13; i++){
+                                 //for(var j = 1; j<13;j++){ 
+                                    //     document.write("<br>" + i + " multiplied by " + j + " is "  + i*j );
+                                  //   }
+                                // }    
+
+                                //  for(var n = 1;n<9;n++){
+                                //  for(var m = 1;m<13;m++){
+                                //   console.log(m + " multiplied by " + n +" is "+ n*m);
+                                //      } 
+                                //         }
+                        //      var i = 0;
+                        //   for( var i = playlist.length; i>playlist.length;i--){
+                        //     document.write("<br>Now Playing: " +playlist[i]);
+                        //   }          
+
+
+
+                            // JAVASCRIPT FUNCTION VERSUS GLOBAL SCOPE 
+                             
+
+ //ORGANIZING AND SIMPLIFYING JAVASCRIPT WITH OBJECT LITERALS
+
+
+
+
+   
+
+//  var me ={
+//      name:"Peter",
+//      age:12,
+//      color:"black" 
+//  };
+// for(item in me){
+//     console.log(item);
+// }
+
+
+
+
+
+
+//  console.log("Hello World"); 
+//        function me(){
+//  var myValue = document.getElementById("myTextBox").value;
+//  if(myValue.length == 0){
+//      document.getElementById("demo").innerHTML="Please enter a real value in the text box";
+//      return;
+//       }
+//     var myTitle = document.getElementById("title");
+//     myTitle.innerHTML = myValue;
+//        }
+       
+</script>  
+ </body>
+</html>

@@ -1,0 +1,181 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+ function sayName(){
+     document.write("Hello World");
+ }
+ function sayname( name,age){
+     document.write( name + " is " + age + " years old");
+     document.write("<br>");
+ }
+ function Sayme( name,any){
+     document.write( name + " is  a " + any  + " guy");
+     document.write("<br>");
+ }
+
+
+function concatenate(first,last){
+    var full;
+
+    full = first  +  last;
+    return full;
+}
+function secondfunction(){
+    var result;
+    result = concatenate('Samuel','Peter');
+    document.write(result);
+    
+}
+function hypotenuse(a,b){
+    function square(X){ return X*X;}
+    return Math.sqrt(square(a) + square(b));
+
+}
+function secondfunction(){
+    var result;
+    result = hypotenuse(4,4);
+    document.write(result);
+    
+}
+var message;
+console.log(typeof message);
+
+function sayme(){
+    console.log("lemme Know");
+}
+var func = new Function("x","y","return x*y;");
+function ola(){
+    var result;
+    result = func(10,20);
+    document.write(result);
+}
+age = 30;
+age++;
+console.log(age);
+ var num1 = 10;
+ var num2 = 20;
+ console.log(num2 > num1 ? "True":"False");
+ var num = 0;
+ if(num < 5){
+     num++;
+     console.log(" num " + num);
+ }
+
+ num = parseFloat( "12.9666876868634jfdj.8999907gfgdgfdcgvhlggsxfgvlh");
+//  alert(num);
+
+ var me ={
+     name:'sam',
+     color:'black',
+     age: 12
+ };
+ for(him in me){
+ console.log(him);
+ }
+
+
+
+
+
+
+
+
+
+ function total( one,two){
+     var totalThis = one + two;
+     return totalThis;
+        
+ }
+ var result = total(1,2);
+ document.write(result);
+
+
+ document.write("<br>");
+
+ function total( one,two){
+     var totalThis = one * two;
+     return totalThis;
+        
+ }
+ var result = total(2,3);
+ document.write(result);
+
+ document.write("<br>");
+
+ function nameCheck(name){
+  if(name == "Kobe"){
+     return "Wassup My Guy";
+  } else{
+      return  "Who you be";
+   }
+ }
+ var result = nameCheck("Kobe"); 
+//  alert(result);
+
+
+ var me = new Object();
+ me.name ="Peter";
+ me.age = 12;
+ for(item in me){
+     document.write(item, "<br>");
+ }
+ var colors = ["red","black","yellow"];
+alert(colors);
+var color = new Array("green","lime","crimson","skyblue");
+color.push("wheat");
+alert(color);
+var abc = "abc";
+alert(abc.length);
+
+var person = {
+    firstName: "Peter",
+    lastName: "Akobe",
+    age:12,
+     children:["Divine","Mojisiayo","oloruntoba"],
+address:{
+        street:"Alama",
+         city :"learning",
+         state:"Ma"
+        },
+          myName:function(){
+              return this.street +" is Known for "+this.city;
+          }
+     } 
+     console.log(person.myName());
+//  for(var i= 0;i < children.length;i++){
+     console.log(person.children[2]);
+//  }
+//  console.log(person.myName());
+    // let num3 = 45; addition of two variables;
+    // let num4 = 45;
+    // alert(num3 + num4);
+    function me(){
+        document.write("i love you");
+    }
+    function us(){
+        document.write("Close Browser");
+    }
+    </script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+ <form action="">
+     <input type="button" onclick="sayName()" value="Welcome">
+ 
+      <input type="button" onclick="sayname('Zara',7)" value="Welcome">
+     <input type="button" onclick="Sayme('Sammy','fine')" value="Hello World"> 
+    <input type="button" onclick="secondfunction()" value="call function">
+    <input type="button" onclick="secondfunction()" value="callfunction">
+    <input type="button" onclick="sayme()" value="howfar">
+    <input type="button" onclick="ola()" value="How areyou">
+    <input type="button" onclick="me()" value="Wassup">
+    <input type="button" onclick="us()" value="Was">
+ </form>
+</body>
+</html>

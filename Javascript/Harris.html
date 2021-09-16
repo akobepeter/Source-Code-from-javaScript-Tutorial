@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  
+</head>
+<body>
+    <!-- <center>
+        <form name="myForm">
+            <table border="1">
+                <tr>
+                    <td>FirstName</td>
+                    <td><input type="text" name="txtFirstName"></td>
+                </tr>
+
+                <tr>
+                    <td>MiddleName</td>
+                    <td><input type="text" name="txtMiddleName"></td>
+                </tr>
+
+                <tr>
+                    <td>LastName</td>
+                    <td><input type="text" name="txtLastName"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><center>
+                        <input type="button" 
+                        value="click Me" 
+                        onclick="makeml()">
+                    </td>
+                </tr>
+            </table>
+            
+            <textarea 
+            name="txtGreeting"  
+            cols="28" 
+            rows="10" 
+            wrap>
+        </textarea>
+
+        </form>
+    </center>-->
+
+    <!-- <hr> -->
+    <!-- <center>
+            <form name="myForm">
+                <table border="1">
+                    <tr>
+                        <td>Please enter a number</td>
+                        <td><input type="text" name="txtNumber"></td>
+                    </tr>    
+    
+                    <tr>
+                        <td colspan="2"><center>
+                            <input type="button" 
+                            value="click Me" 
+                            onclick="checkGuess()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <center>
+                                <textarea 
+                                name="txtOutput"  
+                                cols="35" 
+                                rows="1" 
+                                >
+                                </textarea>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" 
+                name="txtGuess" 
+                value="JavaScript">
+                
+
+    
+            </form>
+        </center> -->
+        <center>
+                <form name="myForm">
+                    <table border="1">
+                        <tr>
+                            <td>Please enter a color</td>
+                            <td><input type="text" name="txtColor"></td>
+                        </tr>    
+        
+                        <tr>
+                            <td colspan="2"><center>
+                                <input type="button" 
+                                value="click Me" 
+                                onclick="changeColor()">
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td colspan="2">
+                                <center>
+                                    <textarea 
+                                    name="txtOutput"  
+                                    cols="35" 
+                                    rows="1" 
+                                    >
+                                    </textarea>
+                                </center>
+                            </td>
+                        </tr> -->
+                    </table>
+
+                    
+    
+        
+                </form>
+            </center>
+    <script>
+
+
+
+       // function checkGuess() {
+            // number = 50;
+            // var guess = Math.floor(Math.random()*100) +1;
+           // var number = document.myForm.txtNumber.value;
+           // var guess = document.myForm.txtGuess.value;
+           // if(number!=guess){
+               // document.myForm.txtOutput.value = "incorrect";
+           // }
+            // else if(number > guess){
+               // document.myForm.txtOutput.value = "guess to high";
+           // }
+           //else if(number < guess){
+               // document.myForm.txtOutput.value = "guess too low";
+           // }
+            //else{
+               // document.myForm.txtOutput.value = "correct";
+           // }
+       // }
+
+    
+        function changeColor() {
+            var color = document.myForm.txtColor.value;
+            document.bgColor = color;
+            
+        }
+        // function makeml() {
+        //     var firstname = window.document.myForm.txtFirstName.value;
+        //     var middlename = document.myForm.txtMiddleName.value;
+        //     var lastname = document.myForm.txtLastName.value;
+        //     var greeting = "";
+        //     greeting = " Hi, there user, you firstname is ";
+        //     greeting+=firstname;
+        //     greeting+= " you also have a nice middlename which is  ";
+        //     greeting+=middlename;
+        //     greeting+= " Lastly your last name is ";
+        //     greeting+=lastname;
+        //     document.myForm.txtGreeting.value=greeting;
+        // }
+
+    //      var my_guess = 50;
+    //      var turns = 0;  
+    //      var msg=''; 
+         
+    //  msg = "I'm thinking of a number between 1 and 100 \n";
+    //  msg += "Guess my number and I'll tell you if it's too high \n";
+    //  msg += "too low or correct. Try to guess in the fewest turn";
+    //  alert(msg);
+
+    //     var computer_guess = prompt("What is your guess computer ",(Math.floor(Math.random()*5) + 1));
+
+    //     while(computer_guess != my_guess){
+    //          turns++;
+    //         computer_guess = Number(prompt(turns + " keep trying " + " what is your guess computer ",computer_guess));   
+    //     }  
+
+
+    //     if(computer_guess > my_guess){
+    //         turns++;
+    //         computer_guess = Number(prompt(turns + " guess is too high ",computer_guess));
+    //     }
+
+
+    //     if(computer_guess < my_guess){
+    //         turns++;
+    //         computer_guess = Number(prompt(turns + " guess is too low ",computer_guess));     
+    //     }
+
+    //      if(computer_guess == my_guess){
+    //     msg = "YOU WIN \n";
+    //     msg += "it took you "
+    //     msg +=  turns + " turns! "
+    //     alert(msg);
+    //     }
+
+
+
+       
+    //var question = [["what is 2 plus 3",5],["what is 2 minus 3",-1],["what is 2 multiplied by 3",6],["what is 2 divided by 3",0.667],["what is 2 modulos 3",3],["What is 2 exponential 3",0]];
+     
+       // for(var i =0, max=question.length; i<max; i++){
+           // var answer = question[Math.floor(6*Math.random())];
+           // var answer = Number(prompt(question[i][0]));
+              //question[i][0] = Math.floor(Math.random()*6) +1
+              //while(answer !=  question[i][1]){
+               // Number(prompt(question[i][0]));
+
+               // if(answer == question[i][1]){
+                     // console.log('correct');
+                //  }
+             // }
+  
+                //   else{
+                //       alert('Game Over');
+                //   }
+            
+             
+             
+           // var answer = Number(prompt(,question[i][0]);
+          //  var answer = Number(prompt(question[i][0],Math.floor(Math.random()*5) +1));
+            
+       // }
+
+
+
+
+
+
+
+
+                           // var background_color = String(prompt("What is your favourite color?"));
+                           // document.bgColor = background_color;
+                            
+
+                   // var theTime = new Date();
+                   // document.write(`current date and time is :${theTime}`);
+                   // document.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var input  = Number(prompt("How many side do you want"));
+        // var roll = Math.floor(Math.random()*6) + 1;
+        // console.log(roll);
+        // var total = input * roll;
+        // alert(total);
+
+
+
+        
+       
+        // for(var i =0, max=question.length;i<max;i++){
+             //var answer = prompt(question[i][0]);
+            // question = Math.floor(Math.random() *5) +1;
+           // alert(question[i][0]);
+        //     // var answer = prompt(question[i][0]);
+        //      question = Math.floor(Math.random() *5) +1; 
+       //  }
+
+
+
+
+
+    </script>
+</body>
+</html>

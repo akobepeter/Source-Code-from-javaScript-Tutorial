@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        font: bold 24px/150% Arial,Helvetica,sans-serif;
+        display: block;
+
+        width:300px;
+        padding: 10px;
+        margin: 10px auto;
+    }
+</style>
+<body>
+    <script>
+
+        quiz = {
+            "name":"Super Hero Name Quiz",
+            "description": "How many super heroes can you name",
+            "question": "What is the real name of ",
+            "questions":[
+                {"question": "Superman","answer":"clark kent"},
+                {"question": "Batman","answer":"bruce wayne"},
+                {"question": "Wonderman","answer":"dianna prince"}, 
+            ]
+        }
+            var score = 0;
+            for(var i = 0, question,answer,max = quiz.question.length;i<max;i++){
+                question = quiz.questions[i].question;
+                answer = ask(question);
+                check(answer);
+            }
+            function ask(){
+                return prompt(quiz.question + question);
+            }
+            if(answer === quiz.questions[i].answer){
+                alert("correct");
+                score++;
+            }else{
+                alert("Wrong");
+            }
+            var $button = document.getElementById("button");
+            $start.addEventListener("click",function(){quiz(play),false});
+    </script>
+    <button id="button">Click To Play Quiz Ninja</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+         .jumbotron{
+            background-size: cover; 
+              height: 70vh;
+              width: 100%;  
+        }
+        .imagec{
+            height: 400vh;
+              width: 400vh;
+        } 
+    </style>
+</head>
+<body onload="changeImage()">
+
+<div>
+    <img src="a.png" id="img"  class="jumbotron" class="imagec">
+</div>
+ <script>
+   var image = document.getElementById("img");
+   var i = Math.floor(Math.random()*4);
+   function changeImage(){
+  if(i==0){
+      image.src = "a.png";
+  }else if(i==1){
+      image.src="b.png";
+  }else if(i==2){
+      image.src="c.png";
+  }else if(i==3){
+      image.src="d.jpg";
+  }
+   }
+
+ </script>
+    
+</body>
+</html>

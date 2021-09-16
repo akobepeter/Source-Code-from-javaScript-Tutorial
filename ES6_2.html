@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Arrow function
+
+        var Persons = function(data) {
+            for(let key in data){
+                this[key] = data[key];
+            }
+            this.getKeys =() => Object.keys(this); 
+            
+
+        }
+
+        var Alena = new Persons({name: "Alena",role:"Teacher"});
+        console.log(`Alena's keys: ${Alena.getKeys()}`);
+
+        // var getKeys = Alena.getKeys;
+        // console.log(getKeys());
+
+        function greet(name = "Peter",timeOfDay = "Day"){
+            console.log(`Good ${timeOfDay}, ${name}`);
+        }
+        greet("Samuel","Night");
+
+
+        // Rest Parameters and Spread Operators
+        function myFunction(name,...params){
+            console.log(name ,params);
+        }
+        myFunction('Kate',1,2,3,"Peter");
+
+
+        let chocolate = ["Vanilla","Strawberry","Banana"];
+        let fruit = ["mango","apple","grape"];
+        let grocery = ["paw paw",...chocolate,"water-melon",...fruit];
+        console.log(grocery);
+
+
+        function HiFunction(name,param) {
+            console.log(`My name is ${name} and i am ${param}`);
+        }
+
+        let args = ["peter","good"];
+        HiFunction(...args);
+
+        // Destructing
+        let toybox = {item1: "cars",item2: "house",item3: "toys"};
+        let {item1,item2,item3} = toybox;
+        console.log(item1 + " and " + item3);
+
+        let widgets = ["widget1","widget2","widget3","widget4","widget5"];
+        let [a,b,c,...d] = widgets;
+        console.log(...d);
+
+
+        function getData({url='myposturl.com',method="post"} = {}, callback) {
+            callback(url,method);
+        }
+        getData({url: 'myposturl.com'},function( url,method){
+            console.log(url,method)
+        });
+        getData({url: 'kobe.com.ng',method:"put"},function( url,method){
+            console.log(url,method)
+        });
+        getData({method:"delete"},function( url,method){
+            console.log(url,method)
+        });
+
+        let parentObject = {
+            title: "Super Important",
+            childObject:{
+                title: "Equal Important",
+            }
+        }
+        console.log(parentObject.childObject.title)
+        // let{title,childObject:{title:childTitle}} = parentObject;
+        // console.log(childTitle);          
+
+
+
+    </script>
+</body>
+</html>

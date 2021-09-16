@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+</head>
+<body>
+    <h1>Hello World JavaScript Application</h1>
+    <div id="container">
+        <p> Welcome home my guy</p>
+    </div>
+
+    <div id="maincontainer">
+        <p>sabi nigga</p>
+    </div>
+
+
+
+           <div>
+            Enter your name:
+            <input id = "name" name="name" type="text" size="30" onblur="isTheFieldEmpty(this,document.getElementById('name_help'))">
+            <span id="name_help"></span>
+            </div>
+
+        <script>
+
+
+            var createPTag = document.createElement("p");
+            createPTag.innerHTML = "i love javascript";
+            document.getElementById("container").appendChild(createPTag);
+
+           // var createTextElement = document.createTextElement("keep moving");
+            //document.getElementById("maincontainer").appendChild(createTextElement);
+
+
+            function  calc() {
+                var Width = document.getElementById("width").value ;
+                var Height = document.getElementById("height").value;
+                document.getElementById("Answer").value = width * Height;      
+            }
+            
+
+
+
+
+            function inArray(arrayToCheck,value){
+                for(i =0;i<arrayToCheck.length;i++){
+                    if(arrayToCheck[i]==value){
+                        return true;
+                    }
+                }
+                    return false;
+            }
+
+            var randArray = [1,2,3,4,5];
+
+            console.log("In Array : "+ inArray(randArray,4));
+
+
+            for( j= 0;j <20;j++){
+                if(j%2 == 0){
+                    console.log("the even numbers are ", j);
+                }
+
+            }
+            var customer = {name:"bob",address:"123 main",balance:50.50};
+            for(k in customer){
+                console.log(customer[k]);
+            }
+
+             function timer5Seconds() {
+                 alert("You");
+             }
+             setTimeout(timer5Seconds,5000);
+
+           var yourName = prompt("what is your name");
+           if(yourName != null){
+               console.log("Hello " + yourName);
+           }else{
+               alert("pls enter ur name next time");
+           } 
+
+            
+            function sayHello(){
+            document.write("Hello <br>");
+            }
+          sayHello();
+        
+ 
+        function  openAlert(mess) {
+        alert(mess);
+        }
+
+
+        // function editNodeText(regex,input,helpId,helpMessage){
+        //    if(!regex.test(input)){
+        //        if(helpId != null)
+        //        while(helpId.childNodes[0]){
+        //            helpId.removeChild(helpId.childNodes[0])
+        //        }
+        //        helpId.appendChild(document.createTextNode(helpMessage));
+        //    } else{
+        //        if(helpId != null){
+        //            while(helpId.childNodes[0]){
+        //                helpId.removeChild(helpId.childNodes[0]);
+        //            }
+        //        }
+        //    }
+        // }
+        // function isTheFieldEmpty(inputField,helpId){
+        //     return editNodeText(/^[A-Za-z\.\' \-]{1,15}\s?[A-Za-z\.\'\-]{1,15}\s?[A-Za-z\.\'\-]{1,15}/, inputField.value,helpId,"Please enter a valid name");
+        // }
+
+
+            var custArray = ["Tom","Bob","Sally","Sue"];
+            var getCust = function(index){
+                if(index >custArray.length){
+                throw new RangeError("Index must be >= 0 and <= " +custArray.length);
+            }else{
+                return custArray[index];
+            }
+
+            }
+            try{
+                document.write("Customer: ", getCust(5), "<br>");
+            }
+            catch(ex){
+                if(ex instanceof RangeError){
+                    document.write(ex.message , "<br>")
+                }
+            }
+
+        function calA(w,h){
+            var area = w*h;
+            document.write(area);
+        }
+
+        var me = function say(name,age) {
+            console.log(name + " is " + age + " years old ");
+        }; 
+        me("peter",10);
+
+
+
+        var person = new Object();
+        person.pName = "Peter";
+        person.pAge = 100;
+        person.pProfession = "Student";
+        document.write(person.pName + "<br>");
+
+        
+        </script>
+        <a href="JavaScript:void(0)" onclick="alert('hello');">Say Hello</a> 
+</body>
+</html>

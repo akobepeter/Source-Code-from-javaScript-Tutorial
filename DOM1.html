@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            border-bottom: 2px dashed blue;
+            padding-left: 40px; 
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="myHeading">Welcome to Javascript and the DOM</h1>
+    <p>Learning to make a web page interactive</p>
+    <!-- <input type = "text" id="myInputText">
+    <button id="myButton">Click</button> -->
+
+    <ul>
+        <li>Mango</li>
+        <li>Grape</li>
+        <li class="error-not__purple">Sun</li>
+        <li>Orange</li>
+        <li class="error-not__purple">Moon</li>
+        <li class="error-not__purple">Star</li>
+        <li>Banana</li>
+    </ul>
+
+    <script>
+
+        // var heading = document.getElementById('myHeading');
+        // heading.addEventListener('mouseover',function() {
+        //     heading.style.backgroundColor = 'red';
+        // });
+
+            // document.addEventListener('click',()=>{
+            //     const myHeading = document.getElementById('myHeading');
+            //     const myInputText = document.getElementById('myInputText');
+            //     myHeading.style.backgroundColor = myInputText.value;
+            // });
+
+
+            const myList = document.getElementsByTagName('li');
+
+            for(let i = 0; i < myList.length;i++){
+                myList[i].style.border = '1px solid red';
+                myList[i].style.listStyle = 'none'; 
+            }
+
+            const errorNotPurple = document.getElementsByClassName('error-not__purple');
+
+            for(let i = 0; i < errorNotPurple.length;i++){
+                errorNotPurple[i].style.background = 'yellow'; 
+            }
+    </script>
+</body>
+</html>

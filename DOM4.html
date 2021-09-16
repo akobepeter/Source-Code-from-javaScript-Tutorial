@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="myHeading">Welcome to Javascript and the DOM</h1>
+    <p>Welcome:</p>
+    <button id="toggleList">Hide list</button>
+
+    <div class="container">
+    <p class="description">Learning to make a web page interactive</p>
+    <!-- <input type = "text" id="myInputText"> -->
+    <button id="myButton">Click</button>
+
+    <ul>
+        <li>Mango</li>
+        <li>Grape</li>
+        <li>Sun</li>
+        <li>Orange</li>
+        <li>Moon</li>
+        <li>Star</li>
+        <li>Banana</li>
+    </ul>
+
+        <input type ="text"  class="addInputItem">
+        <button   class="addButtonItem">Add Item</button>
+        <button class="removeLastItem">Remove Last Item</button>
+    </div>
+
+    <script>
+        const containerDiv = document.querySelector('.container');
+        const addInputItem = document.querySelector('.addInputItem');
+        const addButtonItem = document.querySelector('.addButtonItem');
+        const removeLastItem = document.querySelector('.removeLastItem');
+
+
+            //Event Bubbling
+        
+        containerDiv.addEventListener('mouseover',(e)=>{
+            if(e.target.tagName == 'LI'){
+            e.target.textContent = e.target.textContent.toUpperCase();
+            e.target.style.color = 'blue';
+            }
+        });
+
+        containerDiv.addEventListener('mouseout',(e)=>{
+            if(e.target.tagName == 'LI'){
+            e.target.textContent = e.target.textContent.toLowerCase();
+            e.target.style.color = 'red';
+        }
+        });
+
+        addButtonItem.addEventListener('click',(e)=>{
+            
+            //Appending a Node
+            let ul = document.getElementsByTagName('ul')[0];
+
+            //Create New Element
+            let li = document.createElement('li');
+            li.textContent = addInputItem.value;
+            
+            //Appending a Node
+            ul.appendChild(li);
+
+            //clear Input value
+            addInputItem.value = '';
+        });
+
+        
+          //Removing a Node
+        removeLastItem.addEventListener('click',(e)=>{
+
+            //Appending a Node
+            let ul = document.getElementsByTagName('ul')[0]; 
+
+            //Create New Element
+            let li = document.querySelector('li:last-child');
+
+            //remove a node
+            ul.removeChild(li);
+
+        });
+        
+        
+        // Changing An Element
+        // button.addEventListener('click',()=>{
+            
+        //      p.textContent = input.value + ' : ';
+
+        //      input.value = '';
+        // });
+    </script>
+
+</body>
+</html>

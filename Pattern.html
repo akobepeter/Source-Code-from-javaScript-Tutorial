@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // !function(_){
+        //     underscore.someawesomemethod = "yay";
+        //     console.log(underscore.VERSION);
+        // }(_);
+
+        var awesomeNewModule = (function(exports) {
+            var exports = {
+                foo:5,
+                bar:10
+            };
+
+            exports.helloMars = function() {
+                console.log("Hello Mars");
+            };
+
+            exports.goodbye = function() {
+                console.log("Goodbye");
+            };
+
+            return exports;
+        }(awesomeNewModule || {}));
+
+    </script>
+</body>
+</html>

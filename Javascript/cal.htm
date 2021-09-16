@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+Value1:<input type="text" id="firstnumber"><br><br>
+Value2:<input type="text" id="secondnumber"><br><br>
+Operator:
+<select id="operator">
+    <option value = "Add">Add</option>
+    <option value = "minus">minus</option>
+    <option value = "divide">divide</option>
+    <option value = "multiply">multiply</option>
+    <option value="modulos"> modulos</option>
+</select>
+<p id="test"></p>
+<button type="button" value="calculate" onclick="cal()">Calculate it</button>
+    <script>
+function cal(){
+var a =parseInt(document.getElementById("firstnumber").value);
+var b = parseInt(document.getElementById("secondnumber").value);
+var operator = document.getElementById("operator").value;
+var calculate;
+if(operator == "Add"){
+    document.getElementById("test").innerHTML = a+b;
+}else if(operator == "minus"){
+    document.getElementById("test").innerHTML = a-b;
+}else if( operator == "divide"){
+    document.getElementById("test").innerHTML = a/b;
+}else if(operator == "multiply"){
+    document.getElementById("test").innerHTML = a*b;
+}else if(operator == "modulos"){
+    document.getElementById("test").innerHTML = a%b;
+}
+}
+</script> 
+</body>
+</html>

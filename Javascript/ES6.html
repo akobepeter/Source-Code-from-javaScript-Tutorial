@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+body{
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: #ffc600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color:white;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+.jump span{
+    display: inline-block;
+    transition: transform 0.3s;
+    /* cursor: url('http://csscursor.info/source/santahand.png'),default; */
+}
+.jump span:hover{
+    color: black;
+    transform: translateY(-20px);
+}
+
+    </style>
+</head>
+<body>
+    <!-- <p>Hi I'm 01</p>
+    <p>Hi I'm 02</p>
+    <p>Hi I'm 03</p>
+    <p>Hi I'm 04</p>
+    <p>Hi I'm 05</p>
+    <p>Hi I'm 06</p>
+    <p>Hi I'm 07</p>
+    <p>Hi I'm 08</p>
+    <p>Hi I'm 09</p>
+    <p>Hi I'm 10</p> -->
+
+         <div class="person">
+            <p>Wes</p>
+            <p>Snickers</p>
+            <p>Kait</p>
+        </div>
+
+        <h2 class="jump">SPREADS!</h2>
+
+    <script>
+        //More Spread Operators Examples
+       const people = Array.from(document.querySelectorAll('.person p'));
+   const names9 = people.map((person)=> person.textContent) 
+        console.log(names9);
+    //const names9 =people.map();
+
+    const deepDish = {
+        pizzaName: 'Deep Dish',
+        size: 'Medium',
+        ingredients:['Marinara','Italian Sausage','Dough','Cheese']
+    }
+       const shoppingList = ['Milk','Flour',...deepDish.ingredients] ;
+       console.log(shoppingList);
+
+
+
+        const heading= document.querySelector('.jump');
+        heading.innerHTML = sparanWrap(heading.textContent);
+        //const span = sparanWrap(heading.textContent);
+
+        function sparanWrap(word) {
+            return [...word].map(letter => `<span>${letter}</span>`).join('');
+        }
+var roles ={
+    type: "Admin",
+    displayType:function(){
+        console.log(this.type);
+    }
+};
+ var super_role = Object.create(roles);
+ super_role.displayType();
+
+ var guest_role = Object.create(roles);
+ guest_role.type = "Guest";
+ guest_role.displayType();
+
+
+ var det ={name:"Tom",ID:"E1001"};
+ var copy =Object.assign({},det);
+ console.log(copy);
+ for(let val in copy){
+     console.log(copy[val]);
+ }
+
+ var o1={a:10};
+ var o2={b:20};
+ var o3={c:30};
+ var me = Object.assign(o1,o2,o3);
+ console.log(me);
+ console.log(o2);
+
+ var o1={a:10};
+ var obj= Object.assign(o1);
+ obj.a++
+ console.log("Value of 'a' in the merged object after increment");
+ console.log(obj.a);
+
+ delete det.name;
+ console.log(name in det);
+ console.log(det);
+ 
+ const course= 'RFB2';
+ const flightNumber = '20-AC2018-jz';
+ const accountNumber= '825242631RT0001';
+
+ console.log(course.startsWith("RFB"));
+
+ const model= "BMW";
+ function leftPad(str,length = 20) {
+     return `-> ${''.repeat(length-str.length)}${str}`;
+ }
+ console.log(leftPad(model));
+
+ //Desturcturing Objects
+ const Person = {
+    first:"Peter",
+    last: "Akobe",
+    twitter: "none",
+    city:"jos"
+ };
+ const{first,last,twitter,city} = Person;
+
+const details = ['Peter',123,'kobe.org'];
+const[name1,id,website]= details
+console.log(name1,id,website);
+
+ 
+
+ var emp = {name:'john',Id:3};
+ var{name='Peter',Id = 5} = emp;
+ console.log(name);
+ console.log(Id);
+
+
+ 
+// Destructuring Array
+const team = ['wes','harry','sarah','keegan','Riker'];
+const[captain,assistant,...players] = team;
+
+
+// Destructuring function- Multiple returns and named defaults
+
+
+
+
+// The for of loop
+
+// const cuts = ['Chuck','Brisket','Shank','Short Rib'];
+
+
+// for(const [i,cut] of cuts.entries()){
+//     console.log(`${cut} is the ${i+1} item`);
+// }
+
+
+function addUpNumbers() {
+    let total = 0;
+    for( const num of arguments){
+        total += num;
+    }
+    console.log(total);
+    return total;
+} 
+addUpNumbers(10,23,52,34,12,13,123);
+
+
+const name3 = "Peter Akobe";
+for( const char of name3){
+    console.log(char);
+}
+
+const ps = document.querySelectorAll('p');
+    for(const paragraph of ps){
+        paragraph.addEventListener('click',function() {
+            console.log(this.textContent);
+        })
+    }
+
+    const cuts = ['Chuck','Brisket','Shank','Short Rib'];
+            // cuts.forEach((cut)=>{
+            //     console.log(cuts)
+            // })
+                for(const index in cuts){
+                console.log(cuts[index]);
+                }
+
+          //Template Literals
+    var greeting = `Welcome`;
+    console.log(`${greeting} to the world of programming`);
+
+    var name = "Bredan";
+    console.log(` Hello,${name}`);
+            
+    var a = 10;
+    var b = 20;
+    console.log(`The sum of ${a} and ${b} is ${a+b}`);
+
+    function fn() {
+        return "Hello World";
+    }
+    console.log(`Message:${fn()}`);
+
+        //String.raw()
+        var text = `Hello \n World`;
+        console.log(text);
+        var raw_text = String.raw `Hello\n World`;
+        console.log(raw_text);
+        //String.fromCodePoint()
+        console.log(String.fromCodePoint(104,84));
+
+
+
+                //Es6 Arrays
+//Declaring and initializing Arrays
+    var nums=[1,2,3,3];
+    console.log(nums[0]);
+    console.log(nums[1]);
+    console.log(nums[2]);
+    console.log(nums[3]);
+    console.log(nums[3]);
+
+        //Array Object
+var arr_names = new Array(10)
+for(var i = 0; i<arr_names.length;i++){
+    arr_names[i]=i*1
+    console.log(arr_names[i])
+}
+
+        //Array Object
+    //Array Constructor Accepts Comma Separated Values
+
+    var names = new Array("Mary","Tom","Jack","Jill")
+    for(var i =0;
+    i<names.length;i++)
+    console.log(names[i])
+
+        //Array Method
+        //concat()
+
+        var alpha=["a","b","c"];
+        var numeric = [1,2,3];
+        var alphaNumeric = alpha.concat(numeric);
+        console.log("alphaNumeric: " + alphaNumeric);
+
+            //every()
+            function isBigEnough(element,index,array){
+                return(element>=10);
+            }
+            var passed=[12,5,8,130,44].every(isBigEnough);
+            console.log("Test value: " +passed);
+
+                //filter()
+                function isBigEnough(element,index,array){
+                return(element>=10);
+            }
+            var passed=[12,5,8,130,44].filter(isBigEnough);
+            console.log("Test value: " +passed);              
+
+
+                //forEach()
+                var nums = new Array(12,13,14,15)
+                console.log("Printing original array......")
+                nums.forEach(function(val,index) {
+                    console.log(val)
+                })
+                nums.reverse()
+                console.log("Printing Reversed array....")
+                nums.forEach(function(val,index) {
+                    console.log(val)
+                })
+
+
+                    //map()
+                    var numbers=[1,4,9];
+                    var roots = numbers.map(Math.sqrt)
+                    console.log("roots is: " +roots);
+
+                    //reduce()
+                    var number1=[0,1,2,3];
+                    var total=number1.reduce(function(a,b){return a+b})
+                     console.log(`total is ${total}`);
+
+                     //reduceRight()   
+                    var number2=[0,1,2,3];
+                    var total=number2.reduce(function(a,b){return a+b})
+                     console.log(`total is ${total}`);
+
+
+                    //Array.prototype.find
+                    var numbers = [1,2,3];
+                    var oddNumbers= numbers.find((x)=>x%3==1);
+                    console.log(oddNumbers);
+                    //Array.prototype.findIndex
+                    var numbers4 = [1,2,3];
+                    var oddNumber = numbers4.findIndex((x)=> x%2 == 1);
+                    console.log(oddNumbers);
+
+                    //Array.prototypes.entries
+
+                    var numbers5=[1,2,3];
+                    var val= numbers5.entries()
+                    console.log(val.next().value);
+                    console.log(val.next().value);
+                    console.log(val.next().value);
+
+                    var numbers6=[1,2,3];
+                    var val= numbers6.entries()
+                        console.log([...val]);
+
+
+                        //Using for in for Object
+                        const apple = {
+                            color:'Red',
+                            size:'Medium',
+                            weight:50,
+                            sugar:10
+                        }
+                        for(prop in apple){
+                        const value = apple[prop]
+                        console.log(value,prop);
+                        }
+
+                        //Array.from()
+                        // const people = document.querySelectorAll('.person p');
+                        // const peopleArray = Array.from(people,person =>{
+                        //     return person.textContent;
+                        // });
+                        // console.log(personArray);
+
+
+                                // function sumAll() {
+                                //     const nums = Array.from(arguments);
+                                //     return nums.reduce((prev,next) => prev +next,0);
+                                // }
+                                // sumAll(2,34,23,234,234,234234,234234,2342);
+
+                                    //Array.of()
+                                    const ages = Array.of(12,4,23,62,34);
+                                    console.log(ages);
+
+
+                                    //Array.some()
+                                    const ages3 = [32,15,19,12];
+                                    const adult = ages3.some(ages3=>ages3>18);
+                                    console.log(adult);
+
+                                        //Spread Operator i.e ...
+                                        const featured = ["Deep Dish","Peperoni","Hawaiian"];
+                                        const specialty = ["Meatzza","spicy Mama","Margherita"];
+                                        const pizzas = [...featured,...specialty];
+                                        console.log(pizzas);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Boolean
+var bool = new Boolean();
+//document.write('bool.constructor() is: ' +bool.constructor)
+
+function book(title,author) {
+    this.title = title;
+    this.author = author;
+}
+var myBook = new book('perl','Tom');
+book.prototype.price = null;
+myBook.price = 100;
+console.log("Book title is : " +myBook.title);
+console.log("Book author is : " +myBook.author);
+console.log("Book price is : " +myBook.price);
+
+function books(title,publisher,price) {
+    this.title=title;
+    this.publisher= publisher;
+    this.price=price;
+}
+var newBooks = new books("Perl","leo Inc",200);
+//console.log("newBooks.toSource() is : " + newBooks.toSource());
+
+
+
+
+
+var flag = new Boolean(false);
+console.log("flag.toString is :" + flag.toString());
+
+
+ var flag = new Boolean(true);
+ console.log("flag.valueOf is: " + flag.valueOf());
+
+
+ document.write("<br>");
+    //Es6 Strings
+
+    //Es6 Strings Constructor
+    var str = new String('This is String');
+    //document.write("Str.constructor is:" + str.constructor);
+
+
+    //Es6 Strings Length
+ var uname = "Hello world";
+ console.log(uname);
+ console.log("The length is: " +uname.length);
+
+
+        //Es6 Strings Prototype
+
+        function employee(id,name) {
+            this.id = id;
+            this.name = name;
+        }
+        var emp = new employee(123,"smith");
+        employee.prototype.email = "mrpeterakobe@gmail.com";
+        console.log("Employee's email: " +emp.email);
+
+
+        var str = "This is String";
+        var result = str.charAt(13);
+        console.log(result);
+
+        var str1= "This is string one";
+        var str2= "This is string two";
+        var str3 = `${str1} and ${str2}`;
+        console.log(str3);
+
+        // Es6 String localecompare()
+        var str1 = "This is a beautiful string";
+        var index = str1.localeCompare("don't");
+        console.log(index);
+
+    
+
+</script>
+</body>
+</html>

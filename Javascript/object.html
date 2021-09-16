@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+ <h1 id="time"> </h1>
+<div class="container">
+<button onmouseout="clearDate()">show Date</button>
+</div>
+<input type="button" value="Say Bye" onclick="SayHello()">
+
+ <script>
+      function showDate(){
+         var time = document.getElementById("time");
+          time.innerHTML = Date();
+      }
+      function clearDate(){
+         var time = document.getElementById("time");
+          time.innerHTML = Date();
+      } 
+        console.log("Welcome");
+        var persons = {
+            name:"Ryan",
+            age:10,
+            Address:"lagos",
+            children:['Peter','Akobe'],
+            address:{
+                street:'Alama',
+                city:"Jos",
+                state:"Plateau"
+            },
+            fullName:function(){
+                return this.name +" is "+ this.age +" years old";
+            }
+        }
+        var apple = new Object();
+        apple.color = "red";
+        apple.shape = "round";
+        apple.describe = function(){
+            return this.color +" " + this.shape;
+        }
+        number = [2,3,5,8];
+        console.log(number[0] + number[3]);
+        numbers = [33,54,76,34,2,6];
+
+        numbers.forEach(function(number){
+            console.log(number);
+        });
+        var test = "This is a test";
+        var Test = "This is another Test";
+        document.write(test,"<br>",Test);
+
+        let theNumber= Number(prompt("Enter a Number "));
+        switch(theNumber){
+            case 100:
+             alert("Weldone");
+            break;
+            case 90:
+            alert("Weldone");
+            break;
+            case 80:
+            alert("Weldone");
+            break;
+            case 70:
+            alert("Weldone");
+            break;
+            case 60:
+            alert("Weldone");
+            break;
+            case 50:
+            alert("Weldone");
+            break;
+            default:
+            alert("Keep trying");
+        }
+        var me =[
+          {
+            name:"Praise",
+            age:10
+        },
+          {
+            name:"Peter",
+            age:19
+        },
+           {
+            name:"Paul",
+            age:15
+        },
+          {
+            name:"Oshela",
+            age:11
+        },
+         {
+            name:"Samuel",
+            age:20
+        },
+         {
+            name:"Daniel",
+            age:10
+        },
+
+        ];
+        console.log(me[0].name);
+        console.log(apple.describe());
+        console.log(persons.fullName());
+        console.log(persons.name,"lives in ", persons.Address);
+        console.log("Has the property?",persons.hasOwnProperty(name));
+        
+        function SayHello(){
+            document.write("i love this");
+            document.write("<br>");
+        }
+            </script> 
+
+</body>
+</html>
+
+  

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        height:100vh;
+        color: red;
+        text-align: center;
+        font-size: 24px;
+      }
+      html{
+        background: #444;
+      }
+      h1{
+        background: #777;
+      }
+    </style>
+</head>
+<body>
+  <h1>Quiz Naija</h1>
+  <form id="answer">
+    <input type="text"><br><br>
+    <button>Submit Answer</button>
+  </form>
+
+  <script>
+
+
+quiz = {
+            "name":"Super Hero Name Quiz",
+            "description": "How many super heroes can you name",
+            "question": "What is the real name of ",
+            "questions":[
+                {"question": "Superman","answer":"clark kent"},
+                {"question": "Batman","answer":"bruce wayne"},
+                {"question": "Wonderman","answer":"dianna prince"}, 
+            ]
+        }
+var $form = document.getElementById("answer");
+    
+
+function hide(element) {
+  element.style.display = "none";
+}
+function show(element) {
+  element.style.display = "block";
+}
+//hide($start);
+//play(quiz);
+function quiz() {
+  hide($start);
+  show($form);
+  var i = 0;
+chooseQuestion();
+  $form.addEventListener("submit",function(event){
+    event.preventDefault();
+    check($form[0].value);
+  },false);
+
+ function chooseQuestion () {
+   var question =quiz.questions[i].question;
+   ask(question); 
+ }
+    
+    // for(var i = 0, question,answer,max= quiz.questions.length;i<max;i++){
+    //     question = quiz.questions[i].question;
+    //     answer = ask(question);
+    //     check(answer);
+    // }
+    function ask(question){
+      $form[0].value =" ";
+      $form[0].focus();
+       // return prompt(quiz.question + question);
+    }
+    function check(answer){
+      i++;
+    if(i === quiz.questions.length){
+      gameOver();
+    //alert("correct");
+    //score++;
+    }else{
+      chooseQuestion();
+    //alert("Wrong,the right answer is " + quiz.questions[i].answer);
+    }
+    function gameOver(){
+    alert("Game Over, you scored " + score + " points");
+    hide($form);
+    show($start);  
+      }
+      gameOver();
+  }
+  play(quiz);
+ }
+
+  </script>  
+</body>
+</html>

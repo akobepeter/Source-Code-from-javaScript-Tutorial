@@ -1,0 +1,63 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script>
+    
+      function addnumbers(){
+
+   
+         var FirstNumber =parseInt(document.getElementById("txtFirstNumber").value);
+         var SecondNumber =parseInt(document.getElementById("txtSecondNumber").value);
+        
+         document.getElementById("txtResult").value = FirstNumber + SecondNumber;  
+     } 
+
+    </script>
+</head>
+ <body>
+    <h1> JavaScript</h1>
+    
+      <form action="">
+<table>
+<tr>
+    <td>
+       
+    </td>
+    <td>
+        <input type="text" id="txtFirstNumber" placeholder = "First Number">
+    </td>
+</tr>
+
+<tr>
+    <td>
+    
+    </td>
+    <td>
+        <input type="text" id="txtSecondNumber" placeholder = "Second Number" class="u-full-width">
+    </td>
+</tr>
+<tr>
+    <td>
+       
+    </td>
+    <td>
+        <input type="text" id="txtResult" placeholder = "Result">
+    </td>
+</tr>
+<tr>
+        <td>
+        </td>
+        <td>
+            <input type="button" value="Add" id="btnAdd" onclick="addnumbers()">
+        </td>
+    </tr>
+</table>
+      </form>    
+      <script src="learn.js"></script>
+</body>
+</html>

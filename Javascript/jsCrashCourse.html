@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bg-dark{
+        background:#ccc;
+        padding:5px 7px;
+        /* margin:0 auto; */
+        border:1px blue solid;
+    }
+
+    .error{
+        background-color: red;
+        color:white;
+    }
+
+</style>
+<body>
+
+    <section class="container">
+        <form action="#" id="my-form">
+            <h1>Add user</h1>
+            <div class="msg"></div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+            </div>
+
+            <input class="btn" type="submit" value="Submit">
+        </form>
+
+        <ul id="users"></ul>
+
+        <!-- <ul class="items">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+        </ul> -->
+
+    </section>
+    
+    <script> 
+      const todos = [
+          {
+              id: 1,
+              task: "Take out trash",
+              completed: true
+          },
+          {
+              id: 2,
+              task: "code all night",
+              completed: true
+          },
+          {
+              id:3,
+              task: " keep working hard",
+              completed: false
+          },
+          {
+            id: 4,
+            task: " Pray Always",
+            completed: false
+          }
+      ];
+
+     const todoFinish = todos.filter(function(todo){
+        return todo.completed == true;
+     });
+
+     console.log(todoFinish);
+
+     const addNums = num1 =>  num1 + 5;
+
+     console.log(addNums(5,8));
+
+    //  function Constructor
+     function Person(firstName,lastName,dob){
+         this.firstName = firstName;
+         this.lastName = lastName;
+         this.dob = dob;
+
+         this.getFullName = function(){
+            return `${this.firstName} ${this.lastName}`;
+         }
+     }
+
+    //  Person.prototype.getFullName = function(){
+     
+    //  }
+
+     const person1 = new Person("John","Doe","4-9-2020");
+     console.log(person1);
+     console.log(person1.getFullName());
+
+
+    //  DOM
+    //    const items = document.querySelectorAll('.item');
+    //    items.forEach(function(item){
+    //     console.log(item)
+    //    });
+
+    //    const ul = document.querySelector('.items');
+    //     //ul.remove();
+    //     // ul.lastElementChild.textContent= "Welcome";
+    //     // ul.children[0].innerText = "Peter";
+    //     // ul.children[3].innerHTML = "<h1> Akobe </h1>";
+    //     //ul.firstElementChild.textContent = "Hello";
+
+
+    //         const btn = document.querySelector('.btn');
+    //         // btn.style.backgroundColor="red"
+    //         btn.addEventListener('click',loadEvent);
+    //         function loadEvent(e){
+    //             console.log(e.target.className);
+    //             document.querySelector('body').classList.add('bg-dark');
+    //         }
+
+        const myForm = document.querySelector('#my-form'),
+              nameInput = document.querySelector('#name'),
+              emailInput = document.querySelector('#email'),
+              msg = document.querySelector('.msg'),
+              userList = document.querySelector('#users');
+
+              myForm.addEventListener('submit',onSubmit);
+
+              function onSubmit(e) {
+                  e.preventDefault();
+                 
+                   // Form validation
+                  if(nameInput.value === '' || emailInput.value=== ''){
+                      msg.classList.add('error');
+                      msg.innerHTML = 'Please enter all fields';
+                      setTimeout(function(){
+                         msg.remove();
+                      },3000)
+                  }else{
+                       // create New Element
+                      const li = document.createElement('li');
+                      
+                      // Append li and create new text node;
+                      li.appendChild(document.createTextNode(`NAME:${nameInput.value} EMAIL:${emailInput.value}`));
+
+                      userList.appendChild(li);
+
+
+                      //Clear fields
+                      nameInput.value = '';
+                      emailInput.value = '';
+
+                  } 
+              }
+          
+
+    </script>
+    
+</body>
+</html>

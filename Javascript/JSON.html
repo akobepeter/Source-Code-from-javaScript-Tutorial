@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+<h2>JSON Object Creation in JavaScript</h2>
+
+<p id="demo"></p>
+<p id="test"></p>
+<p id="me"></p>
+
+<script>
+var text = '{"name":"John Johnson","street":"Oslo West 16","phone":"555 1234567"}';
+
+var obj = JSON.parse(text);
+
+var employees = [
+    {"firstname":"John","lastname":"Doe"},
+    {"firstname":"Peter","lastname":"Akobe"},
+    {"firstname":"Samuel","lastname":"Akobe"}
+];
+
+
+var obj1 = {user:"john",age:22,country:"united kingdom"};
+var obj2 = {user:"will",age:27,country:"united states"};
+var obj3 = {user:"Abiel",age:19,country:"mexico"};
+var obj4 = {u1:obj1,u2:obj2,u3:obj3};
+obj2.country = "italy";
+document.getElementById("me").innerHTML = obj2.user + " lives in  " + obj2.country;
+
+document.getElementById("demo").innerHTML = employees[0].firstname + " " +employees[2].lastname;
+
+document.getElementById("test").innerHTML = obj.name + " <br>" + obj.street + "<br>" + obj.phone;
+// obj.name + "<br>" +
+// obj.street + "<br>" +
+// obj.phone;
+
+
+
+
+
+var sports = document.getElementById("sports");
+console.log(sports);
+
+</script>  
+</body>
+</html>

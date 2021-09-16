@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function helloWorld(){
+            console.log('world');
+            console.log(this);
+        }
+        helloWorld();
+
+        var portLand = {
+            bridges:12,
+            airport:1,
+            scoreTeam:1,
+            logNumberOfBridges(){
+                console.log(`There are ${this.bridges} bridges in portland`);
+            }
+        };
+
+        function logTeam(){
+            console.log(this.scoreTeam);
+        }
+
+        portLand.logNumberOfBridges();
+        // portLand.logTeam();
+
+        portLand.see = logTeam;
+        portLand.see();
+
+
+        var City = function(name,state){
+
+            this.name = name || 'portland';
+            this.state = state || 'norway';
+        }
+
+        portland = new City();
+        nigeria = new City('Lagos',"ikeja");
+
+        console.log(portland);
+        console.log(nigeria);
+
+
+
+    </script>
+</body>
+</html>

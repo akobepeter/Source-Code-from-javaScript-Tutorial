@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+    <style>
+        body{
+            background: #333 url("set.jpg") center center no-repeat;
+            background-size: cover;
+            color: #532827;   
+        }
+        #container{
+            width: 400px;
+            margin: 40px auto 0;
+            padding: 50px;
+            box-sizing: border-box;
+            background: url("set1.jpg") top left repeat;
+            box-shadow: 0 10px 15px -8px #000;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        h1{
+            margin: 0 0 20px;
+            padding: 0 0 20px;
+            border-bottom: solid 1px #ddd; 
+        }
+        form{
+           text-align: left;  
+        }
+        form label{
+            display: block;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+        form input,
+        form select{
+           padding:  8px;
+           margin: 8px 0;
+        }
+        form input[type = "text"]{
+            width: 90px;
+        }
+        button{
+          background: #6c2726;
+            color: white;
+            border: none;
+            border-bottom: solid 4px #222;
+            text-transform: uppercase;
+            font-size: 18px;
+            padding:  20px 30px;
+            widows: 100%;
+        }
+        button:hover{
+            background: #4c2827;
+            border-bottom-color:#111;
+        }
+        button:active{
+            position: relative;
+            top: 1px;
+        }
+        #totalTip{
+           font-size: 50px;
+           margin-top:40px; 
+        }
+        #totalTip:before{
+            content: "Tip amount";
+            font-size: 14px;
+            font-weight:bold;
+            display: block;
+            text-transform: uppercase;
+        }
+        #totalTip sup{
+            font-size: 24px;
+            top: -18px;
+        }
+        #totalTip small{
+           font-size: 14px;
+           font-weight: bold;
+           display: block; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+<h1>Tip Calculator</h1>
+
+
+<div id="calculator">
+
+
+<form>
+    <label>
+        How much was your bill?<br>
+        $<input type="text" id="billAmount">
+    </label>
+    <label>
+            How was your service?<br>
+            <select id="serviceQuality">
+<option disabled selected value="0"> -- Choose an option --</option>
+<option value="0.3"> 30% - Outstanding</option>
+<option value="0.2">20% - Good</option>
+<option value="0.15">15% - It was okay</option>
+<option value="0.1">10% - Bad</option>
+<option value="0.05">5% - Terrible</option>
+            </select>
+        </label>   
+        <label>
+            How many people are sharing the bill?<br>
+            <input type="text" id="totalPeople">people
+        </label>
+        <button type="button" id="calculate">Calculate</button>
+</form>
+<div id="totalTip">
+    <sup>$</sup><span id="tip"> 0.00</span>
+    <small id="each">each</small>
+</div>
+</div>
+</div>
+<script>
+
+    function calculateTip(){
+        var billAmount = document.getElementById("billAmount").value;
+        var serviceQuality = document.getElementById("serviceQuality").value;
+        var numPeople = document.getElementById("totalPeople").value;
+
+        if(billAmount === " " || serviceQuality == 0){
+             return alert("please enter some values");
+             }
+
+             if(numPeople === " " || numPeople<=1){
+                 numPeople = 1;
+                 document.getElementById("each").style.display="none";
+             }else{
+                document.getElementById("each").style.display="block";
+             }
+
+             var total = (billAmount * serviceQuality) / numPeople;
+             total = Math.round(total *100)/ 100;
+             total = total.toFixed(2);
+             
+             document.getElementById("totalTip").style.display="block";
+             document.getElementById("totalTip").innerHTML = total; 
+         }
+
+            document.getElementById("totalTip").style.display = "none";
+            document.getElementById("each").style.display = "none";
+
+
+            document.getElementById("calculate").onclick = function() {calculateTip();};
+
+
+</script>
+</body>
+</html>

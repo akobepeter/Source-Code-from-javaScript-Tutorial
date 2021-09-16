@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="refresh.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1> Learning JavaScript</h1>
+        <p> Keep Learning</p>
+    </div>
+    <div class="container">
+        <button onclick = "this.innerHTML ='YOU Clicked' ">Click Me</button>
+    </div>
+   <script>
+       var number1 ="seven";
+       var number2 = 7;
+       //alert(number1+number2);
+
+// function doClick(){
+//     alert("you clicked");
+//}
+
+    var myArray = ["sand","shovel","water"];
+     for(var i = 0;i<myArray.length;i++){
+         document.write(myArray[i] );
+        
+     }
+     document.write("<br>");
+
+   var me = new Array();
+        me[0] = " kemi";
+        me[1] = "Amakiri";
+        me[2] = "seyi";
+      var RemovedMe = me.pop();
+        document.write(me);
+        document.write("<br>");
+        document.write("RemovedMe: " +RemovedMe);
+        document.write("<br>");
+       // me.length = 12;
+        document.write(me);
+        document.write("<br>");
+        var num = [1,2,3,6,7,5];
+         document.write(num[0] + num[2]);
+     document.write("<br>");
+
+        // javascript function
+
+
+        function customName(x,y,z){
+            return x+y+z;
+        }
+        document.write(customName(1,1,1))
+ </script>
+</body>
+</html>

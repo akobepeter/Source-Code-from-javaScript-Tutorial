@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body>
+    <script>
+        const promiseToDoSomething =()=>{
+            return new Promise(resolve =>{
+                setTimeout(()=>resolve('I Learnt something'),1000)
+            })
+        }
+
+        const watchOverSomeoneDoingSomething = async ()=>{
+            const something = await promiseToDoSomething()
+            return something + ' and I learnt ';
+        }
+
+        const watchOverSomeoneWatchingSomeoneDoingSomething = async ()=>{
+            const something = await watchOverSomeoneDoingSomething ()
+            return something + ' and I learnt as well ';
+        }
+        watchOverSomeoneWatchingSomeoneDoingSomething().then(res=>{
+            console.log(res);
+        })
+    </script>
+</body>
+</html>

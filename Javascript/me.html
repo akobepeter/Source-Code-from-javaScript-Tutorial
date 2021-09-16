@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+        <table>
+                <tr>
+                    <td>
+                        Email Address
+                    </td>
+                    <td>
+                        <input type = "text" id ="txtEmailAddress">
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            Email Part
+                        </td>
+                        <td>
+                            <input type = "text" id = "txtEmailPart">
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                Domain Part
+                            </td>
+                            <td>
+                                <input type="text" id = "txtDomainPart">
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    <input type="button" value="Submit" onclick = "getEmailAndDomainPart()">
+                                </td>
+                            </tr>  
+                        
+            
+            </table>
+            <script>
+
+    function getEmailAndDomainPart(){
+    var EmailAddress = document.getElementById("txtEmailAddress").value;
+    var EmailPart = EmailAddress.substring(0,EmailAddress.indexOf("@"));
+    var DomainPart = EmailAddress.substring(EmailAddress.indexOf("@")+1);
+    document.getElementById("txtEmailPart").value = EmailPart;
+    document.getElementById("txtDomainPart").value = DomainPart; 
+      }
+
+
+        var str = "i am a boy";
+        var pos = str.search("b");
+        console.log(pos);
+
+         var str = " Please visit a hub";
+        var n = str.toUpperCase();
+        console.log(n);
+
+         today = new Date(2018, 12, 05 );
+          console.log(today);
+
+
+
+
+    </script>  
+</body>
+</html>

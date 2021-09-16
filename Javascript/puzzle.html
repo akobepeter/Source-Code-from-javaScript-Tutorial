@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body>
+    <h1> Complete the puzzle</h1>
+    <input type="text" id="txt">
+    <input type="submit" value="submit" onclick="submit()">
+    <script>
+        function submit(){
+            var puzzle = [["E_T_R","ENTER"],["D_G","DOG"],["FI_H","FISH"]["AP_L_","APPLE"]];
+             for( var i = 0, max = puzzle.length;i<max;i++){
+             var answer = document.write(quiz[i][0]);
+             if(answer === quiz[i][1]){
+                 document.write("Correct");
+                 score++;
+             }else{
+                 document.write("Wrong ,The name is " + puzzle[i][1]);
+            }
+         }
+         document.write("Game Over, your scored " + score + "points");
+        }
+
+</script>  
+</body>
+</html>

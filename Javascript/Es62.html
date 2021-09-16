@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+</head>
+<body>
+
+        <script>
+        
+        const comments =[
+            {id:209384,text:'I love your dog'},
+            {id:523423,text:'cute'},
+            {id:632429,text:'You are so dumb'},
+            {id:192834,text:'Nice work'},
+        ];
+        const id = 632429;
+        const CommentIndex= comments.findIndex(comments => comments.id === id);
+        console.log(CommentIndex);
+
+        const newComments = [...comments.slice(0,CommentIndex),...comments.slice(CommentIndex + 1)];
+        console.log(newComments);
+
+                //Array.from()
+                for(let i of Array.from('hello')){
+                    console.log(i);
+                }
+
+                //Array.prototype.keys()
+                console.log(Array.from(['a','b','c','d'].keys()));
+                
+                //Array Traversal using for... in loop
+                var nums = [1001,1002,1003,1004]
+                for(let j in nums){
+                   console.log(nums[j]); 
+                }
+
+                //Arrays in Javascript
+
+
+                //Pasing Arraya to Function
+
+
+                var names = new Array("Mary","Tom","Jack","Jill")
+                function disp(arr_names) {
+                    for( var i =0;i<arr_names.length;i++){
+                        console.log(names[i]);
+                    }
+                }
+                disp(names);
+
+
+                //function Returning an Array
+                function disp() {
+                    return new Array("mary","Tom","Jack","Jill");
+                }
+                var names = disp()
+                for(var i in names){
+                    console.log(names[i]);
+                }
+
+                //Array Destructuring
+                var arr =[12,13]
+                var[x,y]= arr;
+                console.log(x);
+                console.log(y);
+
+
+                //Es6 Collections
+
+                //Map.prototype.size
+
+                var Mymap = new Map();
+                Mymap.set("j","john");
+                Mymap.set("A","Akobe");
+                Mymap.set("M","Mary");
+                Mymap.set("T","Tom");
+                console.log(Mymap.size);
+
+
+                    //Map Operation
+                    var map = new Map();
+                    map.set('name','Tutorial Point');
+                    map.get('Tutorial Point');
+                    console.log(map.get('name'));
+
+
+                    //The set() method is also chainable.Consider the following
+                    var roles = new Map();
+                    roles.set('r1','user')
+                    .set('r2','Guest')
+                    .set('r3','Admin');
+                    console.log(roles.has('r1'));
+                    
+                    var roles = new Map([
+                        ['r1','User'],
+                        ['r2','Guest'],
+                        ['r3','Admin'],
+                        ['r4','work'],
+                    ]);
+                    console.log(roles.get('...r3'));
+
+
+
+
+
+        </script>
+
+
+
+</body>
+</html>

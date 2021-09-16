@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toggleMenu" onclick="toggleMenu()"></div>
+  <nav id="menu">
+<img src="peter.jpg">
+<ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">CASES</a></li>
+    <li><a href="#">PERSONAL PROJECT</a></li>
+    <li><a href="#">ABOUT ME</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <!-- <li><a href="#">HOME</a></li> -->
+</ul>
+  </nav>
+  <script>
+      var toggleStatus = 1;
+      function toggleMenu(){
+          if(toggleStatus == 1){
+            document.getElementById("menu").style.left = "-240px";
+            toggleStatus = 0;
+          }else if( toggleStatus = 0){
+            document.getElementById("menu").style.left = "0px";
+            toggleStatus = 1;
+          }
+      }
+  </script>  
+</body>
+</html>

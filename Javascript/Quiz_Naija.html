@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        header{
+            text-transform: uppercase;
+            /* background-color:black; */
+            color:black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size:36px/120%;
+            text-align: center;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz Naija</h1>
+    </header>
+    
+    <script>
+
+        var quiz = [["What is super man real name?","clark kent"],["What is wonderwoman's real name?","dianna prince"],["What is Batman's real name?","bruce wayne"],["What is the name of American president?","donald trump"],["what is the best club in the world?","chelsea"]];
+        var score = 0;
+        play(quiz);
+        function play(quiz){
+            for( var i = 0, max = quiz.length;i<max;i++){
+                question = quiz[i][0];
+                answer = ask(question);
+                check(answer);
+                function ask(question){
+                    return prompt(question);
+                }
+                function check(answer){
+                    if(answer == quiz[i][1]){
+                        alert("correct");
+                        score++;
+                    }else{
+                        alert("wrong,the name is " +quiz[i][1]);
+                    }
+                function gameOver(){
+                    alert("Game Over, you scored " + score + " points");  
+                    }
+                    gameOver();
+                }
+                      
+            }    
+            
+        }
+        // for( var i = 0, max = quiz.length;i<max;i++){
+        //     var answer = prompt(quiz[i][0]);
+                answer = Math.floor(Math.random()*5) +1;
+        //     if(answer === quiz[i][1]){
+        //         alert("Correct");
+        //         score++;
+        //     }else{
+        //         alert("Wrong ,The name is " + quiz[i][1]);
+        //     }
+        // }
+        // alert("Game Over, your scored " + score + "points");
+    </script> 
+</body>
+</html>

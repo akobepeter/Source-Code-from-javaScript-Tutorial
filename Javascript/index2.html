@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JavaScript</h1>
+    <script>
+          function sayhello(){
+            alert("Hello World")
+        }
+        var name,money;
+        name = "Ali";
+        document.write(name);
+        document.write("<br>");
+        var myName = "Peter";
+        function checkscope(){
+            var myName = "Samuel";
+            document.write(myName);
+        }
+         a = 10;
+          b = 20;
+        // document.write(c = a+b);
+        // document.write("<br>");
+        // document.write(c = b-a)
+        // document.write("<br>");;
+        // document.write(c = b/a);
+        // document.write("<br>");
+        // document.write(c = a*b);
+        // document.write("<br>");
+        // document.write(c = b%a);
+        document.write("a + b = ");
+        result = a + b;
+        document.write(result);
+        document.write("<br>");
+        a = a++;
+        document.write("a++ = ");
+        result = a++;
+        document.write(result);
+        document.write("<br>");
+        document.write("((a > b) ? 100:200) =>")
+        result = (a > b) ? 100:200;
+        document.write(result);
+        document.write("<br>")
+        var age = 15;
+        if(age >= 15){
+            console.log("Qualified for driving");
+            }
+            else{
+            console.log("don't drive");
+            }
+            document.write("<br>")
+            var a = 10;
+            var b = "String";
+            result = (typeof b == "string"? "B is string":"B is Numeric");
+            console.log("Result =>");
+            console.log(result);
+            document.write("<br>")
+            var book = "maths";
+            if(book == "history"){
+                console.log("History Book");
+            }else if(book =="Physics"){
+                console.log("Physics book");      
+            } else if( book =="maths"){
+                console.log("maths book");
+            }else if(book == "chemistry"){
+                console.log("chemsitry book");
+            }else{
+                console.log("unknown book");
+            }
+            alert("This is my first file in js");
+            var message = "Hello World";
+            message = 100;
+            console.log(typeof message)
+
+            var computer = null;
+            console.log(typeof computer);
+
+            var peter;
+            console.log(typeof peter);
+            console.log(isNaN(false));
+            var num1 = parseInt("1243sfdgfghj");
+            alert(num1);
+            var name = "Peter";
+            var nameStringify = name.toint();
+            console.log(typeof nameStringify);
+            
+
+    </script>
+    <p> Collection of books</p>
+    <p>Click here for result</p>
+    <input type="button" onclick="sayhello()" value="sayhello"/>
+</body>
+</html>

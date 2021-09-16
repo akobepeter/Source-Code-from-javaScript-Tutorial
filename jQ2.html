@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <fieldset>
+
+        <form action="">
+            <label for="pet">Pet Name</label>
+            <input type="text"  id="pet-name">
+
+            
+            <label for="species">Species</label>
+            <select id="species">
+                <option for=""></option>
+                <option for="cat">Cat</option>
+                <option for="sheep">Sheep</option>
+                <option for="dog">Dog</option>
+            </select>
+
+            <br><br>
+
+            <label for="notes">Notes</label>
+            <textarea rows="3" cols="25" id="notes"></textarea>
+
+            <br><br>
+        </form>
+
+        <button id="button">Submit</button>
+
+    </fieldset>
+
+    <br><br>
+    <!-- <fieldset> -->
+        <div id="answer-box">
+            <!-- <button>X</button>     -->
+        </div>
+
+    <!-- </fieldset> -->
+
+    <div id="one">
+        <p>Paragraph One</p>
+    </div>
+
+    <div id="two">
+        <p>Paragraph Two</p>
+    </div>
+
+    <script src="js/jquery-3.5.1.js"></script>
+
+    <script>
+     
+    //  Adding content to the web page
+     $(function(){
+
+        $('#button').on('click',function(){
+        var $name = $('#pet-name');
+        var $species = $('#species');
+        var $notes = $('#notes');
+
+        var $newPet = $(
+            '<section class="six columns"><div class="card"><p><strong>Name:</strong>' + $name.val() +
+            '</p><p><strong>Species:</strong> ' + $species.val() +
+            '</p><p><strong>Notes: </strong> ' + $notes.val() +
+            '</p><span class="close">&times;</span></div></section>'
+        );
+
+        $('#answer-box').append($newPet);
+
+        $('.close').on('click',function() {
+            $(this).parent().remove();
+        })
+      });
+    });
+
+    // remove Content from web page
+    // $('div').on('click',function(){
+    //     $('#one').empty();
+    //     $('#two').remove();
+    // });
+
+    </script>
+</body>
+</html>

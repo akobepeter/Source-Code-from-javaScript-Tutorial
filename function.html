@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+        // function Statement
+        // function goToCoffeeShop() {
+        //     var randNumber = Math.floor(Math.random()*6) +1;
+        //     console.log(randNumber);
+        // }
+
+        // goToCoffeeShop();
+
+        // function Expression
+
+        // var goToCoffeeShop = function(){
+        //     var randNumber = Math.floor(Math.random()*6) +1;
+        //     console.log(randNumber); 
+        // } 
+
+        // goToCoffeeShop();
+
+
+        // function getRandomNumber(upper) {
+        //     var randNumber = Math.floor(Math.random()* upper) +1;
+        //     return randNumber;
+        // }
+
+        // var see = getRandomNumber(6);
+        // console.log(see);
+
+        // function areaOfARectangle(length,width,unit) {
+        //     const area = length*width;
+        //     return `${area} ${unit}`;
+        // }
+
+        // const calculateArea = areaOfARectangle(5,6, 'sq ft');
+        // console.log(calculateArea);
+
+        // function greeting() {
+        //     var person = 'Lilah';
+        //     console.log(person);
+        // }
+        // var person = 'george';
+        // greeting();
+        // console.log(person);
+        // greeting();
+
+
+
+        // function getRandomNumber(lower,upper){
+        //     var userInput1 = prompt("Enter your first number");
+        //     var lower = parseInt(userInput1);
+        //     var userInput2 = prompt("Enter your second number");
+        //     var upper = parseInt(userInput2);
+        //     var random = Math.floor(Math.random()*(upper -lower +1)) + lower;
+        //     return random;
+        // }
+        //  const getRandom = getRandomNumber(0,6);
+        //  console.log(getRandom);
+
+
+         function getRanNumber(lower,upper){
+             if (isNaN(lower) || isNaN(upper)) {
+                 throw new Error('Both argument required');
+             }
+            return Math.floor(Math.random()*(upper-lower +1)) + lower;
+         }
+         var getRandom = getRanNumber('zero','nine');
+         console.log(getRandom);
+         var getRandom = getRanNumber(2,9);
+         console.log(getRandom);
+
+    </script>
+</body>
+</html>
